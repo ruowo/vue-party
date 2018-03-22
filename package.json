@@ -1,0 +1,60 @@
+{
+  "name": "vue-party",
+  "version": "1.0.0",
+  "description": "vue2 components",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard src/**",
+    "fix": "standard src/** --fix",
+    "dev": "rollup -c ./scripts/rollup.config.js -w",
+    "build": "rollup -c ./scripts/rollup.config.js",
+    "test": "nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueparty/vue-party.git"
+  },
+  "author": {
+    "name": "jetiny",
+    "email": "86287344@qq.com"
+  },
+  "license": "MIT",
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "html"
+    ],
+    "ignore": [
+      "dist"
+    ]
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "test"
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./test/helpers/setup.js"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "devDependencies": {
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "bugs": {
+    "url": "https://github.com/vueparty/vue-party/issues"
+  },
+  "homepage": "https://github.com/vueparty/vue-party#readme",
+  "dependencies": {
+    "@vue/test-utils": "^1.0.0-beta.12"
+  }
+}
