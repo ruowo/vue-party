@@ -53,8 +53,5 @@
   "bugs": {
     "url": "https://github.com/vueparty/vue-party/issues"
   },
-  "homepage": "https://github.com/vueparty/vue-party#readme",
-  "dependencies": {
-    "@vue/test-utils": "^1.0.0-beta.12"
-  }
+  "homepage": "https://github.com/vueparty/vue-party#readme"
 }

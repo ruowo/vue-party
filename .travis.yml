@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 8
+deploy:
+  provider: npm
+  email: 86287344@qq.com
+  skip_cleanup: true
+  api_key:
+    secure: PbKMZDLo2iCAXjiN5KNELwzRtcewVxjLfQKtiPTHAJxoVDoRN6dyzJ2hBpPkSN0lDag+HgQxLAJ0KahmmnvsgzgrZVVvHKyr1LT47UFrWDMF8kg1k8jrYIDQfHFC7iiMNVe9qxJ4z7Y8dh9Z/91Iod14c7hTGgnxssv+IGkk+U9Y/2lr6M0cqG31DxcHCGFWVPXJcTWVaEYejEJ97NwN8S3et8Gr0/G2b1qOBvGaNi+dHy3PoqhEfmOiR2ZB3ARwEnpiY4/ngsjwMJnY8KU+ZWZE7V+b3PYN38ni/+vZrGRMwjznbQOrrHyOAfSNvwQzy5ebzKeWLisk+cTrMU9jgZthHz1JBuUjQQp+JCCJXxAt9wQf+GZnhVCpYdcSBd/TC9Vt3BjJ7AlMMFXs64rkckY0C4F9h0i0uaScgIPnp3U/LLJzCjBlJ3WDNDNWZHEaXJELaOZsq9mD9K/bHBC0BZ9A6c0xAjikrxRCb3GngyZzGzpEz8T3cgjNVcvu3ZpxX12O3IrY7lRPngXszRy12tdnrK7BAiCqznAaJDOiaffusTR3V5KU7CSMIVraA7hOj0ljcS9jNV8sL0tmMS8ZTjvzuNLyfNF8k5dUr0wN2NsNSzafzOMk0KXivx9sndZsVIc0FXwQcj8s1irDLopIFsKIJ5TU3hkhiim9Yd3C980=
+script:
+- npm run build
+- npm test
