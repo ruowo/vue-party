@@ -11,7 +11,7 @@ exports.install = function (Vue) {
   let delegate = (vm, events) => {
     let vmEvent = vm.$root.$vmEvent
     let proxy = dispatch.bind(vm)
-    events.map(it => vmEvent.$on(it, proxy))
+    events.forEach(it => vmEvent.$on(it, proxy))
     return () => {
       events.forEach(it => vmEvent.$off(it, proxy))
       delete vm.$unbindEvent

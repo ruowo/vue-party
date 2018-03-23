@@ -11,7 +11,7 @@ Vue.use(broadcast)
 
 ### 插件
 
-- boradcast 业务通信
+- boradcast 业务层模块通信
 
 ### 过滤器
 
