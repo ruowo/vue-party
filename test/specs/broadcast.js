@@ -2,7 +2,7 @@ import test from 'ava'
 import {expect} from 'chai'
 import {createLocalVue, shallow, mount } from '@vue/test-utils'
 import Vue from 'vue'
-import broadcast from '../../src/plugins/broadcast.js'
+import {install} from '../../src/plugins/broadcast.js'
 
 test('broadcast', async (t) => {
   let n = 0;
@@ -53,7 +53,7 @@ test('broadcast', async (t) => {
     }
   }
   const localVue = createLocalVue()
-  localVue.use(broadcast)
+  localVue.use(install)
 
   let wrap = mount(ParentNode, {localVue})
   expect(n).to.eql(4)

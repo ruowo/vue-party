@@ -1,5 +1,5 @@
 
-exports.install = function (Vue) {
+export const install = function (Vue) {
   let broadcast = function (key, ...args) {
     this.$root.$vmEvent.$emit(key, key, args)
   }

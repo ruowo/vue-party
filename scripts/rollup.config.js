@@ -4,24 +4,14 @@ import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 
 export default [
-  createEntry('plugins', 'broadcast.js', 'broadcast.js'),
-  createEntry('filters', 'filesize.js', 'filesize.js'),
-  createEntry('filters', 'basename.js', 'basename.js'),
-  createEntry('filters', 'extname.js', 'extname.js'),
-]
-
-function createEntry (dir, name, dist) {
-  return {
-    input: `src/${dir}/${name}`,
+  {
+    input: `src/index.js`,
     output: [
-      {format: 'cjs', file: `dist/${dist}`},
-    ],
-    external: [
-      './basename'
+      {format: 'cjs', file: `dist/vue-party.js`},
     ],
     plugins: createPlugins()
   }
-}
+]
 
 function createPlugins () {
   return [
@@ -32,11 +22,11 @@ function createPlugins () {
       babelrc: false,
     }),
     resolve({
-      module: true
     }),
     commonjs({
       include: [
-        'node_modules/**'
+        'node_modules/**',
+        'src/**'
       ]
     }),
   ]  

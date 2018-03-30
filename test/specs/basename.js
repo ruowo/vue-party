@@ -2,7 +2,7 @@ import test from 'ava'
 import {expect} from 'chai'
 import {createLocalVue, mount } from '@vue/test-utils'
 import Vue from 'vue'
-import basename from '../../src/filters/basename.js'
+import {install} from '../../src/filters/basename.js'
 
 test('basename', async (t) => {
   const Node = {
@@ -19,7 +19,7 @@ test('basename', async (t) => {
     }
   }
   const localVue = createLocalVue()
-  localVue.use(basename)
+  localVue.use(install)
 
   let wrap = mount(Node, {localVue})
   expect(wrap.text()).to.eql('')

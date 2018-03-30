@@ -1,4 +1,4 @@
-exports.install = (Vue) => {
+export const install = (Vue) => {
   Vue.filter('basename', (path, ext) => {
     let url = String(path || '').trim()
     if (url) {

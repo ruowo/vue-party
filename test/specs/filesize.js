@@ -2,7 +2,7 @@ import test from 'ava'
 import {expect} from 'chai'
 import {createLocalVue, mount } from '@vue/test-utils'
 import Vue from 'vue'
-import filesize from '../../src/filters/filesize.js'
+import {install as filesize} from '../../src/filters/filesize.js'
 
 test('filesize', async (t) => {
   const Node = {

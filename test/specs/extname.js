@@ -2,8 +2,8 @@ import test from 'ava'
 import {expect} from 'chai'
 import {createLocalVue, mount } from '@vue/test-utils'
 import Vue from 'vue'
-import basename from '../../src/filters/basename.js'
-import extname from '../../src/filters/extname.js'
+import {install as basename} from '../../src/filters/basename.js'
+import {install as extname} from '../../src/filters/extname.js'
 
 test('extname', async (t) => {
   const Node = {

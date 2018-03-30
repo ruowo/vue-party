@@ -8,6 +8,7 @@
     "fix": "standard src/** --fix",
     "dev": "rollup -c ./scripts/rollup.config.js -w",
     "build": "rollup -c ./scripts/rollup.config.js",
+    "t": "ava ./test/specs/outside.js --no-color",
     "test": "nyc ava"
   },
   "repository": {

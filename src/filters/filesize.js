@@ -1,4 +1,4 @@
-exports.install = (Vue) => {
+export const install = (Vue) => {
   const base = 1024
   Vue.filter('filesize', (len, size = 3) => {
     len = +len // coerce to number

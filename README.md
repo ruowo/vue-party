@@ -21,4 +21,9 @@ Vue.use(broadcast)
 
 ### 指令
 
+- bridge 事件桥接
+- focus 焦点
+- outside 鼠标点击出区域
+- tip tooltip提示
+
 ### 组件
